@@ -1,0 +1,147 @@
+Question 1:
+
+Write a shell program to find the average of three floating point numbers.
+
+Code:
+read -p "Enter three numbers: " a b c
+
+avg=$(echo "scale=2; ($a+$b+$c)/3" | bc)
+
+echo "Average = $avg"
+
+Output:
+Enter three numbers: 2.5 3.5 4.0
+Average = 3.33
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 2:
+
+Write a shell program to find the area of a circle.
+
+Code:
+read -p "Enter radius: " r
+
+area=$(echo "scale=2; 3.14*$r*$r" | bc)
+
+echo "Area of circle = $area"
+
+Output:
+Enter radius: 5
+Area of circle = 78.50
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 3:
+
+Write a shell program to calculate simple interest.
+
+Code:
+read -p "Enter Principal Rate and Time: " p r t
+
+si=$(echo "scale=2; ($p*$r*$t)/100" | bc)
+
+echo "Simple Interest = $si"
+
+Output:
+Enter Principal Rate and Time: 1000 5 2
+Simple Interest = 100.00
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 4:
+
+Write a shell program to find largest among three numbers.
+
+Code:
+read -p "Enter three numbers: " a b c
+
+if [ $a -ge $b ] && [ $a -ge $c ]; then
+    echo "$a is largest"
+elif [ $b -ge $a ] && [ $b -ge $c ]; then
+    echo "$b is largest"
+else
+    echo "$c is largest"
+fi
+
+Output:
+Enter three numbers: 4 9 2
+9 is largest
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 5:
+
+Write a shell program to check if a year is leap year or not.
+
+Code:
+read -p "Enter year: " y
+
+if [ $((y % 400)) -eq 0 ] || [ $((y % 4)) -eq 0 -a $((y % 100)) -ne 0 ]; then
+    echo "Leap year"
+else
+    echo "Not a leap year"
+fi
+
+Output:
+Enter year: 2024
+Leap year
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 6:
+
+Write a shell program to check whether an alphabet is a vowel or consonant.
+
+Code:
+read -p "Enter a character: " ch
+
+case $ch in
+a|e|i|o|u|A|E|I|O|U)
+    echo "Vowel"
+    ;;
+*)
+    echo "Consonant"
+    ;;
+esac
+
+Output:
+Enter a character: a
+Vowel
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 7:
+
+Write a shell program to check if a person is eligible to vote or not.
+
+Code:
+read -p "Enter age: " age
+
+if [ $age -ge 18 ]; then
+    echo "Eligible for voting"
+else
+    echo "Not eligible for voting"
+fi
+
+Output:
+Enter age: 20
+Eligible for voting
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 8:
+
+Write a shell program to check if a person is eligible for job or not.
+
+Code:
+read -p "Enter age: " age
+
+if [ $age -ge 18 ]; then
+    echo "Eligible for Job"
+else
+    echo "Not eligible for Job"
+fi
+
+Output:
+Enter age: 16
+Not eligible for Job
