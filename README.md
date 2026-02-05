@@ -32,24 +32,25 @@ sudo apt install bc
 ---
 ## ▶️ How to Compile and Execute Shell Programs
 
-Create or open a shell file:
+1. Create or open a shell file:
 
 vi program.sh
 
+2. Press i to enter insert mode and write the code.
 
-Press i to enter insert mode and write the code.
-
-Save and exit:
+3. Save and exit:
 
 Esc
 :wq
 
-
-Give execute permission:
+4. Give execute permission:
 
 chmod +x program.sh
 
-
-Run the program:
+5.Run the program:
 
 ./program.sh
+
+---
+
+_End of **README**_
