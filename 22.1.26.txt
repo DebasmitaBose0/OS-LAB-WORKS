@@ -1,0 +1,124 @@
+ASSIGNMENT – 1
+
+Question 1:
+
+Write the steps to install WSL for Linux environment.
+
+Procedure:
+
+Step 1: Open PowerShell as Administrator
+
+Click on Start Menu
+
+Search PowerShell
+
+Right-click and select Run as Administrator
+
+Step 2: Enable and install WSL
+
+wsl --install
+
+
+The above command installs WSL and the default Linux distribution (Ubuntu).
+
+Step 3: Restart the system
+
+Step 4: Launch Linux distribution
+
+Open Ubuntu from the Start Menu
+
+Create a username and password
+
+Step 5: Verify installation by running the following command:
+
+wsl --list --verbose
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 2:
+
+Write a shell program to perform addition of two numbers and display the result.
+
+Code:
+echo "Enter first number:"
+read a
+
+echo "Enter second number:"
+read b
+
+sum=$((a+b))
+
+echo "Sum = $sum"
+
+Output:
+Enter first number: 70
+Enter second number: 30
+Sum = 100
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 3:
+
+Write a shell program to perform multiplication of two numbers and display the result.
+
+Code:
+echo "Enter first number:"
+read a
+
+echo "Enter second number:"
+read b
+
+mul=$((a*b))
+
+echo "Multiplication = $mul"
+
+Output:
+Enter first number: 5
+Enter second number: 4
+Multiplication = 20
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 4:
+
+Write a shell program to find whether a number is greater, equal to or less than another number.
+
+Code:
+echo "Enter first number:"
+read a
+
+echo "Enter second number:"
+read b
+
+if [ $a -gt $b ]; then
+    echo "$a is greater than $b"
+elif [ $a -lt $b ]; then
+    echo "$a is less than $b"
+else
+    echo "$a is equal to $b"
+fi
+
+Output:
+Enter first number: 15
+Enter second number: 10
+15 is greater than 10
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 5:
+
+Write a shell program to check whether a number is odd or even.
+
+Code:
+echo "Enter a number:"
+read n
+
+if [ $((n % 2)) -eq 0 ]; then
+    echo "$n is an even number"
+else
+    echo "$n is an odd number"
+fi
+
+Output:
+Enter a number: 10
+10 is an even number
